@@ -1,8 +1,9 @@
 var express = require('express');
+var fs = require('js');
 
 var app = express.createServer(express.logger());
 
-var content = fs.readFilesync('index.html');
+var content = fs.readFileSync('index.html');
 content = content.toString();
 
 app.get('/', function(request, response) {
